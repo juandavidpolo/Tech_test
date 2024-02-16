@@ -7,6 +7,7 @@ public class UserResponse {
   private String lastName2;
   private String phone;
   private String address;
+  private String city;
 
   public UserResponse(
     String firstName,
@@ -14,7 +15,8 @@ public class UserResponse {
     String lastName1,
     String lastName2,
     String phone,
-    String address
+    String address,
+    String city
   ) {
     this.firstName = firstName;
     this.middleName = middleName;
@@ -22,6 +24,7 @@ public class UserResponse {
     this.lastName2 = lastName2;
     this.phone = phone;
     this.address = address;
+    this.city = city;
   }
 
   public String getFirstName() {
@@ -64,5 +67,12 @@ public class UserResponse {
   }
   public void setAddress(String address) {
     this.address = address;
+  }
+
+  public String getCity(){
+    return city;
+  }
+  public void setCity(String city){
+    this.city = city;
   }
 }

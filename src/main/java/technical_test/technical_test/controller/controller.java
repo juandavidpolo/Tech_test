@@ -26,6 +26,7 @@ public class controller {
     String lastName2 = "Mendez";
     String phone = "3167530428";
     String address = "Carrera 12 # 32 - 43";
+    String city = "Neiva";
 
     if(type == null || type.isEmpty()){
       CustomResponse<UserResponse> response = new CustomResponse<>(false, "Type parameter is required");
@@ -58,7 +59,7 @@ public class controller {
     */
 
     if (("c".equals(type) && "23445322".equals(number))) {
-      UserResponse UserResponse= new UserResponse(firstName, middleName, lastName1, lastName2, phone, address);
+      UserResponse UserResponse= new UserResponse(firstName, middleName, lastName1, lastName2, phone, address, city);
       CustomResponse<UserResponse> response = new CustomResponse<>(true, "The user was found", UserResponse);
       return ResponseEntity.ok(response);
     }else {
